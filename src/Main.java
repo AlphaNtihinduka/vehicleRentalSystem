@@ -65,13 +65,11 @@ public class Main {
         System.out.println("Car2 is rented: "+isRented);
 
 
-        // Customer5 renting truck2
-        truck2.setIsrented(true);
-        rentedVehicles.put(customer5, truck2);
-
         for(Customer customer: rentedVehicles.keySet()) {
             System.out.println(customer.getName()+" rented " +rentedVehicles.get(customer));
         }
+
+
 
     }
 }
