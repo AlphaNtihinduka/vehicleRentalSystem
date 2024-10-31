@@ -66,7 +66,15 @@ public class Main {
 
 
         for(Customer customer: rentedVehicles.keySet()) {
+
+            // Calculate total rental price if the renting days are 2 days
             System.out.println(customer.getName()+" rented " +rentedVehicles.get(customer));
+            double totalRentalPrice = rentedVehicles.get(customer).getPrice_per_day() * 2;
+            System.out.println("Total rental price for "+customer.getName() + " is "+totalRentalPrice);
+
+
+
+            System.out.println("***********************************************");
         }
 
 
