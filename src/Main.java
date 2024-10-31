@@ -44,6 +44,10 @@ public class Main {
         car3.setIsrented(true);
         rentedVehicles.put(customer4, car3);
 
+        // Customer4 renting Car3
+        car3.setIsrented(true);
+        rentedVehicles.put(customer4, car3);
+
         // Customer5 renting truck4
         truck4.setIsrented(true);
         rentedVehicles.put(customer5, truck4);
@@ -51,5 +55,23 @@ public class Main {
         // Checking if the truck4 is free or not
         boolean isRented = truck4.isIsrented();
         System.out.println("Truck4 is rented: "+isRented);
+
+        // Checking if the truck3 is free or not
+        isRented = truck3.isIsrented();
+        System.out.println("Truck3 is rented: "+isRented);
+
+        // Checking if the car2 is free or not
+        isRented = car2.isIsrented();
+        System.out.println("Car2 is rented: "+isRented);
+
+
+        // Customer5 renting truck2
+        truck2.setIsrented(true);
+        rentedVehicles.put(customer5, truck2);
+
+        for(Customer customer: rentedVehicles.keySet()) {
+            System.out.println(customer.getName()+" rented " +rentedVehicles.get(customer));
+        }
+
     }
 }
