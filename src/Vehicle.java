@@ -3,6 +3,8 @@ public class Vehicle {
     private String colour;
     private double price_per_day;
     private boolean isrented;
+
+    //Creat a constructor for the Vehicle
     public Vehicle(String licensePlate, String colour, double price_per_day) {
         this.licensePlate = licensePlate;
         this.colour = colour;
@@ -10,6 +12,8 @@ public class Vehicle {
         this.isrented = false;
     }
 
+
+    // Implement getters and setters
     public String getLicensePlate() {
         return licensePlate;
     }
@@ -40,6 +44,18 @@ public class Vehicle {
 
     public void setIsrented(boolean isrented) {
         this.isrented = isrented;
+    }
+
+
+    // Print the vehicle information
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "licensePlate='" + licensePlate + '\'' +
+                ", colour='" + colour + '\'' +
+                ", price_per_day=" + price_per_day +
+                ", isrented=" + isrented +
+                '}';
     }
 }
 //    Vehicle information:
