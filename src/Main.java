@@ -28,6 +28,10 @@ public class Main {
         Car truck3 = new Car("T-03", "Orange", 400);
         Car truck4 = new Car("T-04", "Black", 300);
 
+        // Create motorycles
+        Car motorcycle1 = new Car("m-01", "Red", 1400);
+        Car motorcyle2 = new Car("m-02", "Green", 50);
+
         // Customer1 renting Car1
         car1.setIsrented(true);
         rentedVehicles.put(customer1, car1);
@@ -52,6 +56,10 @@ public class Main {
         truck4.setIsrented(true);
         rentedVehicles.put(customer5, truck4);
 
+        // Customer6 renting motorcycle1
+        motorcycle1.setIsrented(true);
+        rentedVehicles.put(customer6, motorcycle1);
+
         // Checking if the truck4 is free or not
         boolean isRented = truck4.isIsrented();
         System.out.println("Truck4 is rented: "+isRented);
@@ -64,14 +72,24 @@ public class Main {
         isRented = car2.isIsrented();
         System.out.println("Car2 is rented: "+isRented);
 
+        // Checking if the motorcycle1 is free or not
+        isRented = motorcycle1.isIsrented();
+        System.out.println("Car2 is rented: "+isRented);
 
-        // Customer5 renting truck2
-        truck2.setIsrented(true);
-        rentedVehicles.put(customer5, truck2);
-
+        System.out.println(" ");
+        // displaying customers and rented cars
         for(Customer customer: rentedVehicles.keySet()) {
+            // Calculate total rental price if the renting days are 2 days
             System.out.println(customer.getName()+" rented " +rentedVehicles.get(customer));
+            double totalRentalPrice = rentedVehicles.get(customer).getPrice_per_day() * 2;
+            System.out.println("Total rental price for "+customer.getName() + " is "+totalRentalPrice);
+
+
+
+            System.out.println("***********************************************");
         }
+
+
 
     }
 }
